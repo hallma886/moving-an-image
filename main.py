@@ -34,9 +34,13 @@ def main():
         running = handle_events()  # Handle events and check if we should continue running
 
         # Fill the screen with a background color 
-        screen.fill(config.WHITE) 
+        screen.fill(config.WHITE)
+         
+        pygame.image.load("saturn_family1.jpg")
 
         pygame.display.flip()  # Update the display
+
+
 
         clock.tick(config.FPS) # Limit frame rate to specified number of frames per second (FPS)
 
