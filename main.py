@@ -26,17 +26,20 @@ def main():
     screen = init_game()  # Initialize the game and get the screen
     clock = pygame.time.Clock() # Initialize the clock objecct
     
-
+    backround_image = pygame.image.load("saturn_family1.jpg").convert
+    backround_position = [0, 0]    
  
     # Main game loop
     running = True
     while running:
         running = handle_events()  # Handle events and check if we should continue running
 
+        backround_image = pygame.image.load("saturn_family1.jpg").convert
+        backround_position = [0, 0]
         # Fill the screen with a background color 
         screen.fill(config.WHITE)
          
-        pygame.image.load("saturn_family1.jpg")
+        screen.blit(backround_image, backround_position)
 
         pygame.display.flip()  # Update the display
 
